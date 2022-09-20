@@ -29,10 +29,15 @@ int main()
   // open input file
   inFile.open("TestResultsData.dat");
 
+  // open the output file
+  outFile.open("AnalyzedData.txt");
+  
   // read in the date - first line of file
   inFile >> date;
   cout << date << endl;
-
+    //add date to output file as first line
+  outFile << date << endl;
+  
   // read in the 2 pieces of info on the second line
   inFile >> firstName;
   cout << firstName << ' ';
