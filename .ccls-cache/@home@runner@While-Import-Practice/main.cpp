@@ -33,6 +33,24 @@ int main()
   inFile >> date;
   cout << date << endl;
 
+  // read in the 2 pieces of info on the second line
+  inFile >> firstName;
+  cout << firstName << ' ';
+  inFile >> TestResult;
+  cout << TestResult << endl;
+  
+  while(inFile)
+    {
+      // update number of cases and persons tested
+      cumulative_cases = cumulative_cases + TestResult;
+      count++;    // increment the number of patients
 
+      // read in the next line
+      inFile >> firstName;
+      inFile >> TestResult;
+    }
+  cout << "Total Number Cases = " << count << endl;
+  cout << "Number of persons tested = " << cumulative_cases << endl;
+  
   
 }
